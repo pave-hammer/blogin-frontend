@@ -13,6 +13,3 @@ const CreateBlog = (props) => {
 }
 
 export default CreateBlog
-
-
-<ididifiisdf></ididifiisdf>
