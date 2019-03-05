@@ -1,18 +1,20 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react'
+import { StyleSheet, Text, View, AppRegistry, TextInput } from 'react-native'
+import CreateBlog from './components/createblog'
 
 export default class App extends React.Component {
-  constructor(){
-    super()
-    this.state = {
-      blogs: []
-    }
+  constructor(props){
+    super(props)
+    this.state = 
+    { text: "useless placeholder" }
   }
+
+  
   render() {
     return (
-      <View style={styles.container}>
-        <Text>B'Login</Text>
-      </View>
+      <CreateBlog
+        text={this.state.text}
+      />
     )
   }
 }
