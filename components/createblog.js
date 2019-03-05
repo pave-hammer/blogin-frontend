@@ -5,7 +5,7 @@ const CreateBlog = (props) => {
 
   return (
     <TextInput
-      style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+      style={{height: 500, borderColor: 'gray'}}
       onChangeText={(text) => this.setState({text})}
       value={props.text}
     />
