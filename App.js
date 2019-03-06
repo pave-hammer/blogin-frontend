@@ -1,13 +1,11 @@
-import React from 'react'
-import CreateBlog from './components/createblog'
-import BackButton from './components/backButton'
-import HomeScreen from './components/homescreen'
+import React from 'react';
+import CreateBlog from './components/createblog';
+import Home from './components/home';
 
-import Home from './components/home'
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 
 const MainNavigator = createStackNavigator({
-  Home: {screen: HomeScreen},
+  Home: {screen: Home},
   Profile: {screen: CreateBlog},
 });
 

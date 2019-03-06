@@ -1,22 +1,44 @@
-import React from 'react'
-import Icon from 'react-native-vector-icons/FontAwesome';
+import React, { Component } from 'react'
+import { AppRegistry, View, Text, StyleSheet } from 'react-native'
 import { Button } from 'react-native-elements';
-import { NativeRouter, Route, Link } from "react-router-native";
 
-import {
-  View,
-  ScrollView,
-  Text
- } from 'react-native'
+export default class Home extends Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <View style={{width:'140%'}}>
+        <Text style={styles.text}>#Trending</Text>
+        </View>
+        <Button style={styles.navbar}
+          title="Dashboard"
+          type="outline"
 
-
-
-const Home = (props) => {
-  return (
-    <Text>
-      Hello!
-    </Text>
-  )
+        />
+      </View>
+    )
+  }
 }
 
-export default Home
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    padding: 50,
+
+  },
+  text: {
+    backgroundColor: 'steelblue',
+    color: 'white',
+    fontSize: 24,
+    padding: 10,
+  },
+  navbar: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    padding: 30,
+  }
+})
+
+AppRegistry.registerComponent('App', () => App)

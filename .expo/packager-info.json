@@ -1,9 +1,9 @@
 {
-  "devToolsPort": 19002,
-  "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 70740,
-  "expoServerNgrokUrl": "https://zh-ipx.anonymous.blogin-frontend.exp.direct",
-  "packagerNgrokUrl": "https://packager.zh-ipx.anonymous.blogin-frontend.exp.direct",
-  "ngrokPid": 70763
+  "packagerPid": 1405,
+  "expoServerPort": 19000,
+  "expoServerNgrokUrl": "https://aa-6mf.anonymous.blogin-frontend.exp.direct",
+  "packagerNgrokUrl": "https://packager.aa-6mf.anonymous.blogin-frontend.exp.direct",
+  "ngrokPid": 1433,
+  "devToolsPort": 19002
 }
