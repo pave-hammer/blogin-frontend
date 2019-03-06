@@ -16,7 +16,7 @@ export default class App extends React.Component {
   // }
 
   // getData = async() => {
-  //   const url = 'http://localhost:3002'
+  //   const url = 'https://bilbobloginsbackend.herokuapp.com/'
   //   try {
   //     const info = await fetch(url)
   //     const data = await info.json()
@@ -26,16 +26,17 @@ export default class App extends React.Component {
   //   }
   // }
 
-  // async componentDidMount() {
-  //   const url = 'http://127.0.0.1:3002/test'
-  //   try { 
-  //     const api = await fetch(url)
-  //     const awaitapi = await api.json()
-  //     this.setState({blogs: awaitapi})
-  //   } catch(err) {
-  //     console.log("Error fetching data-----------", err)
-  //   }
-  // }
+  async componentDidMount() {
+    const url = 'https://bilbobloginsbackend.herokuapp.com/'
+    try { 
+      const api = await fetch(url)
+      const awaitapi = await api.json()
+      this.setState({blogs: awaitapi})
+      console.log(this.state.blogs[0].posts[0].title)
+    } catch(err) {
+      console.log("Error fetching data-----------", err)
+    }
+  }
 
   change = (text) => {
     console.log("text: ", text.nativeEvent.text)
