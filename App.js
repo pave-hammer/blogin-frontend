@@ -6,10 +6,11 @@ import Trending from './components/trending'
 export default class App extends React.Component {
   constructor(props){
     super(props)
-    this.state =
-    { text: "useless placeholder" },
-    { blogs: [] },
-    { posts: [] }
+    this.state = {
+      text: "useless placeholder",
+      blogs: [],
+      posts: []
+    }
   }
 
   async componentDidMount() {
@@ -27,13 +28,7 @@ export default class App extends React.Component {
 }
 
   change = (text) => {
-    console.log("text: ", text.nativeEvent.text)
     this.setState({text: text.text})
-  }
-
-  blogtitles = () => {
-    // const titleMap = this.state.posts.map(post => post.title)
-    // console.log(titleMap)
   }
 
   render() {
@@ -43,17 +38,9 @@ export default class App extends React.Component {
         change={this.change}
       />,
       <Trending 
-        blogtitles={this.blogtitles}
+        posts={this.state.posts}
+        state={this.state}
       />
     )
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-})
