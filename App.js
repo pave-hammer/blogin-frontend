@@ -11,10 +11,7 @@ export default class App extends React.Component {
     { text: "useless placeholder" }
   }
 
-  change = (text) => {
-    console.log("text: ", text.nativeEvent.text)
-    this.setState({text: text.text})
-  }
+  
 
   render() {
     return (
