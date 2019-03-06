@@ -23,6 +23,7 @@ export default class Home extends Component {
   }
 
   render() {
+    const {navigate} = this.props.navigation;
     return (
       <View style={styles.container}>
         <View style={{width:'140%'}}>
@@ -31,7 +32,7 @@ export default class Home extends Component {
         <Button style={styles.navbar}
           title="Dashboard"
           type="outline"
-
+          onPress={() => navigate('Dashboard')}
         />
       </View>
     )
