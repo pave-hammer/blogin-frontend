@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View, AppRegistry, TextInput } from 'react-native'
-import CreateBlog from './components/createblog'
+import CreateBlog from './components/createblog.js'
+import Dashboard from './components/dashboard.js'
 
 export default class App extends React.Component {
   constructor(props){
@@ -9,6 +10,8 @@ export default class App extends React.Component {
     { text: "useless placeholder" }
   }
 
+
+
   change = (text) => {
     console.log("text: ", text.nativeEvent.text)
     this.setState({text: text.text})
@@ -16,10 +19,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <CreateBlog
-        text={this.state.text}
-        change={this.change}
-      />
+      <Dashboard />
     )
   }
 }

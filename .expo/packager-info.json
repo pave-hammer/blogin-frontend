@@ -1,9 +1,9 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": null,
-  "packagerPort": null,
-  "packagerPid": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null
+  "expoServerPort": 19000,
+  "packagerPort": 19001,
+  "packagerPid": 15301,
+  "expoServerNgrokUrl": "https://zh-ipx.anonymous.blogin.exp.direct",
+  "packagerNgrokUrl": "https://packager.zh-ipx.anonymous.blogin.exp.direct",
+  "ngrokPid": 15429
 }
