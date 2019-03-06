@@ -1,6 +1,8 @@
-import React from 'react'
-import { StyleSheet, Text, View, AppRegistry, TextInput } from 'react-native'
-import CreateBlog from './components/createblog'
+import React from 'react';
+import { StyleSheet, Text, View, AppRegistry, TextInput } from 'react-native';
+import CreateBlog from './components/createblog';
+import Home from './components/home';
+
 
 export default class App extends React.Component {
   constructor(props){
@@ -19,7 +21,8 @@ export default class App extends React.Component {
       <CreateBlog
         text={this.state.text}
         change={this.change}
-      />
+      />,
+      <Home />
     )
   }
 }
@@ -27,8 +30,8 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff',  
   },
 })
