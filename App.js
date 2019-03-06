@@ -2,7 +2,8 @@
 import React from 'react'
 import { StyleSheet, Text, View, AppRegistry, TextInput } from 'react-native'
 import CreateBlog from './components/createblog.js'
-import Home from './components/home';
+import Home from './components/home.js';
+import Dashboard from './components/dashboard.js'
 
 export default class App extends React.Component {
   constructor(props) {
@@ -46,12 +47,12 @@ export default class App extends React.Component {
 
   render() {
     return (
+      <Dashboard />,
       <CreateBlog
         text={this.state.text}
         change={this.change}
       />,
-      <Home />,
-      <Dashboard />
+      <Home />
     )
   }
 }
