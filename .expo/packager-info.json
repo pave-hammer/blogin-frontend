@@ -1,9 +1,1 @@
-{
-  "packagerPort": 19001,
-  "packagerPid": 2096,
-  "expoServerPort": 19000,
-  "expoServerNgrokUrl": "https://aa-6mf.anonymous.blogin-frontend.exp.direct",
-  "packagerNgrokUrl": "https://packager.aa-6mf.anonymous.blogin-frontend.exp.direct",
-  "ngrokPid": 2116,
-  "devToolsPort": 19002
-}
+{}
