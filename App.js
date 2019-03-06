@@ -1,14 +1,42 @@
-import React from 'react';
-import { StyleSheet, Text, View, AppRegistry, TextInput } from 'react-native';
-import CreateBlog from './components/createblog';
+
+import React from 'react'
+import { StyleSheet, Text, View, AppRegistry, TextInput } from 'react-native'
+import CreateBlog from './components/createblog.js'
 import Home from './components/home';
 
-
 export default class App extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props)
-    this.state =
-    { text: "useless placeholder" }
+    this.state = {
+      blogs: []
+    }
+  }
+
+  // componentDidMount() {
+  //   this.getData()
+  // }
+
+  // getData = async() => {
+  //   const url = 'https://bilbobloginsbackend.herokuapp.com/'
+  //   try {
+  //     const info = await fetch(url)
+  //     const data = await info.json()
+  //     console.log(data)
+  //   } catch(err) {
+  //     console.log(err)
+  //   }
+  // }
+
+  async componentDidMount() {
+    const url = 'https://bilbobloginsbackend.herokuapp.com/'
+    try { 
+      const api = await fetch(url)
+      const awaitapi = await api.json()
+      this.setState({blogs: awaitapi})
+      console.log(this.state.blogs[0].posts[0].title)
+    } catch(err) {
+      console.log("Error fetching data-----------", err)
+    }
   }
 
   change = (text) => {
@@ -22,7 +50,8 @@ export default class App extends React.Component {
         text={this.state.text}
         change={this.change}
       />,
-      <Home />
+      <Home />,
+      <Dashboard />
     )
   }
 }
