@@ -4,7 +4,7 @@ const styles = {
       justifyContent: 'flex-start',
       alignItems: 'center',
       padding: 50,
-    
+
     },
     text: {
       backgroundColor: 'steelblue',
