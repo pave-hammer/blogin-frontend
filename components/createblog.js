@@ -1,8 +1,18 @@
 import React from 'react'
 import { TextInput } from 'react-native'
 
-const CreateBlog = (props) => {
+export default class CreateBlog extends React.Component {
+constructor(props){
+  super(props)
+  this.state =
+  { text: "useless placeholder" }
+  }
 
+  change = (text) => {
+    console.log("text: ", text.nativeEvent.text)
+    this.setState({text: text.text})
+  }
+  render() {
   return (
     <TextInput
       style={{height: 500, borderColor: 'gray'}}
@@ -10,6 +20,5 @@ const CreateBlog = (props) => {
       value={props.text}
     />
   )
+  }
 }
-
-export default CreateBlog
