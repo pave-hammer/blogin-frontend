@@ -3,6 +3,7 @@ import React from 'react'
 import { StyleSheet, Text, View, AppRegistry, TextInput } from 'react-native'
 import CreateBlog from './components/createblog'
 import Trending from './components/trending'
+import Home from './components/home'
 
 export default class App extends React.Component {
   constructor(props) {
@@ -36,14 +37,11 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <CreateBlog
-        text={this.state.text}
-        change={this.change}
-      />,
-      <Trending 
+      <Home 
         posts={this.state.posts}
         state={this.state}
       />
+  
     )
   }
 }
