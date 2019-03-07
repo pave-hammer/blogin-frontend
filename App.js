@@ -1,11 +1,19 @@
-
 import React from 'react'
 import { StyleSheet, Text, View, AppRegistry, TextInput } from 'react-native'
+import {createStackNavigator, createAppContainer} from 'react-navigation';
 import CreateBlog from './components/createblog.js'
 import Home from './components/home.js';
 import Dashboard from './components/dashboard.js'
 
-export default class App extends React.Component {
+const AppNavigator = createStackNavigator({
+  App: {
+    screen: App
+  }
+});
+
+export default createAppContainer(AppNavigator);
+
+class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -47,12 +55,15 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <Dashboard />,
-      <CreateBlog
-        text={this.state.text}
-        change={this.change}
-      />,
-      <Home />
+      // <Dashboard />,
+      // <CreateBlog
+      //   text={this.state.text}
+      //   change={this.change}
+      // />,
+      // <Home />
+      <View>
+        Hello World!
+      </View>
     )
   }
 }
