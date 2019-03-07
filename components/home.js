@@ -7,7 +7,9 @@ export default class Home extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      blogs: []
+      text: "useless placeholder",
+      blogs: [],
+      posts: []
     }
   }
 
@@ -16,15 +18,21 @@ export default class Home extends Component {
   };
 
   async componentDidMount() {
-    const url = 'https://bilbobloginsbackend.herokuapp.com/'
     try {
-      const api = await fetch(url)
-      const awaitapi = await api.json()
-      this.setState({blogs: awaitapi})
-      console.log(this.state.blogs[0].posts[0].title)
+        const api = await fetch('http://localhost:3002')
+        const blogs = await fetch('http://localhost:3002/posts')
+        const awaitapi = await api.json()
+        const awaitposts = await blogs.json()
+        this.setState({blogs: awaitapi})
+        this.setState({posts: awaitposts})
+        console.log(this.state.posts.map(post => post.title))
     } catch(err) {
-      console.log("Error fetching data-----------", err)
+        console.log("Error fetching data-----------", err)
     }
+}
+
+  change = (text) => {
+    this.setState({text: text.text})
   }
 
   render() {
