@@ -17,6 +17,7 @@ const styles = {
       justifyContent: 'flex-end',
       alignItems: 'center',
       padding: 30,
+      backgroundColor: 'red'
     },
     header: {
       width:'140%'

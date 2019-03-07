@@ -1,16 +1,22 @@
 import React from 'react'
-import { FlatList, View, Text } from 'react-native'
+import { FlatList, View, Text, Button } from 'react-native'
 
 const Trending = (props) => {
   console.log('trending props', props)
   return (
-    <View style={{
-      flexDirection: 'row',
-      height: 200,
-      padding: 50,
-    }}>
-    <Text>Trending posts</Text>
-      <View>{props.posts.map(post => <Text>{post.title}</Text>)}</View>
+    <View>
+      <Text style={{
+        backgroundColor: 'grey',
+        fontWeight: "bold",
+        marginTop: 50
+        }}>Trending posts</Text>
+      <View style={{
+        flexDirection: 'column',
+        alignItems: 'center',
+        marginTop: 50
+      }}>
+      <View>{props.posts.map(post => <Button color="#841584" title={post.title} key={post.id}></Button>)}</View>
+      </View>
     </View>
   )
 }

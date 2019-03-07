@@ -41,6 +41,7 @@ export default class App extends React.Component {
         posts={this.state.posts}
         state={this.state}
       />
+      
   
     )
   }
