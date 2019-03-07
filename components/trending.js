@@ -4,18 +4,21 @@ import { FlatList, View, Text, Button } from 'react-native'
 const Trending = (props) => {
   console.log('trending props', props)
   return (
-    <View style={{
-      flexDirection: 'row',
-      alignItems: 'center',
-      justifyContent: 'center',
-    }}>
-    <Text>Trending posts</Text>
-      <View>{props.posts.map(post => <Button onPress={""} title={post.title} style={articleTitleStyles} key={post.id}></Button>)}</View>
+    <View>
+      <Text style={{
+        backgroundColor: 'grey',
+        fontWeight: "bold",
+        marginTop: 50
+        }}>Trending posts</Text>
+      <View style={{
+        flexDirection: 'column',
+        alignItems: 'center',
+        marginTop: 50
+      }}>
+      <View>{props.posts.map(post => <Button color="#841584" title={post.title} key={post.id}></Button>)}</View>
+      </View>
     </View>
   )
 }
-
-
-const articleTitleStyles = {backgroundColor: '#C0C0C0', fontWeight: 'bold', fontSize: 20}
 
 export default Trending
