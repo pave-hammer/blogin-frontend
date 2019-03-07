@@ -1,5 +1,5 @@
 import React from 'react'
-import { FlatList, View, Text } from 'react-native'
+import { FlatList, View, Text, Button } from 'react-native'
 
 const Trending = (props) => {
   console.log('trending props', props)
@@ -10,11 +10,12 @@ const Trending = (props) => {
       justifyContent: 'center',
     }}>
     <Text>Trending posts</Text>
-      <View>{props.posts.map(post => <Text style={{color: 'blue',
-    fontWeight: 'bold',
-    fontSize: 30}} key={post.id}>{post.title}</Text>)}</View>
+      <View>{props.posts.map(post => <Button onPress={""} title={post.title} style={articleTitleStyles} key={post.id}></Button>)}</View>
     </View>
   )
 }
+
+
+const articleTitleStyles = {color: 'blue', fontWeight: 'bold', fontSize: 20}
 
 export default Trending
