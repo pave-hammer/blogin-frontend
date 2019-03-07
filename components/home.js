@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { AppRegistry, View, Text, StyleSheet } from 'react-native'
+import { AppRegistry, View, Text, StyleSheet, StatusBar } from 'react-native'
 import { Button } from 'react-native-elements';
 import styles from './styles'
 
@@ -30,7 +30,8 @@ export default class Home extends Component {
   render() {
     const {navigate} = this.props.navigation;
     return (
-      <View style={styles.container}>
+      <View style={{color: 'red'}}>
+        <StatusBar hidden />
         <View style={styles.header}>
         <Text style={styles.text}>#Trending</Text>
         </View>
@@ -42,7 +43,9 @@ export default class Home extends Component {
       </View>
     )
   }
+
 }
+
 
 
 AppRegistry.registerComponent('App', () => App)
