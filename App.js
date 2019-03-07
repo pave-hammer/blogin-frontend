@@ -1,10 +1,11 @@
+
 import React from 'react'
 import { StyleSheet, Text, View, AppRegistry, TextInput } from 'react-native'
 import CreateBlog from './components/createblog'
 import Trending from './components/trending'
 
 export default class App extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props)
     this.state = {
       text: "useless placeholder",
@@ -30,6 +31,8 @@ export default class App extends React.Component {
   change = (text) => {
     this.setState({text: text.text})
   }
+
+  
 
   render() {
     return (
