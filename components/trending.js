@@ -6,8 +6,8 @@ const Trending = (props) => {
   return (
     <View style={{
       flexDirection: 'row',
-      height: 200,
-      padding: 50,
+      alignItems: 'center',
+      justifyContent: 'center',
     }}>
     <Text>Trending posts</Text>
       <View>{props.posts.map(post => <Text>{post.title}</Text>)}</View>
