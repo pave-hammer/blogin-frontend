@@ -3,7 +3,7 @@
   "expoServerPort": null,
   "packagerPort": null,
   "packagerPid": null,
-  "expoServerNgrokUrl": "https://p4-a4c.anonymous.blogin-frontend.exp.direct",
-  "packagerNgrokUrl": "https://packager.p4-a4c.anonymous.blogin-frontend.exp.direct",
-  "ngrokPid": 53625
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null
 }

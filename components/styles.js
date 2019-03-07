@@ -13,11 +13,7 @@ const styles = {
       padding: 10,
     },
     navbar: {
-      flex: 1,
-      justifyContent: 'flex-end',
-      alignItems: 'center',
-      padding: 30,
-      backgroundColor: 'red'
+      padding: 30
     },
     header: {
       width:'140%'

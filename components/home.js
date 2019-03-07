@@ -22,15 +22,15 @@ export default class Home extends Component {
         <Text style={styles.text}>#Trending</Text>
         </View>
         {this.state.displayBlog ? <CreateBlog /> : null}
+        <Trending 
+        posts={this.props.posts}
+        state={this.props} />
         <Button 
           onPress={() => this.handleClick(this)}
           style={styles.navbar} 
           title="Create Blog Post"
           type="outline"
         />
-        <Trending 
-        posts={this.props.posts}
-        state={this.props} />
       </View>
     )
   }
