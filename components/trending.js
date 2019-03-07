@@ -1,7 +1,9 @@
 import React from 'react'
-import { ScrollView, View, Text, Button } from 'react-native'
+import { View, Text, ScrollView } from 'react-native'
+import { Tooltip } from 'react-native-elements'
 
 const Trending = (props) => {
+  console.log(props.posts)
   return (
     <ScrollView>
       <View style={{
@@ -9,10 +11,9 @@ const Trending = (props) => {
         alignItems: 'center',
         marginTop: 100
       }}>
-        {/* <Tooltip popover={<Text>Info here</Text>}>
-          <Text>Press me</Text>
-        </Tooltip> */}
-        <View>{props.posts.map(post => <Button title={post.title} key={post.id}></Button>)}</View>
+        <Tooltip popover={props.posts.map(post => <Text key={post.id}>{post.text}</Text>)}>
+          {props.posts.map(post => <Text key={post.id} style={{color: 'blue', fontWeight:'bold'}}>{post.title}</Text>)}
+        </Tooltip>
       </View>
     </ScrollView>
   )

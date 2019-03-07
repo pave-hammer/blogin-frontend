@@ -22,28 +22,22 @@ export default class App extends React.Component {
         const awaitposts = await blogs.json()
         this.setState({blogs: awaitapi})
         this.setState({posts: awaitposts})
-        console.log(this.state.posts.map(post => post.title))
     } catch(err) {
         console.log("Error fetching data-----------", err)
     }
-}
+  }
 
   change = (text) => {
     this.setState({text: text.text})
   }
 
-  
-
   render() {
     return (
-      <CreateBlog
-        text={this.state.text}
-        change={this.change}
-      />,
-      <Trending 
-        posts={this.state.posts}
-        state={this.state}
-      />
+      <View>
+        <Trending 
+          posts={this.state.posts}
+        />
+      </View>
     )
   }
 }

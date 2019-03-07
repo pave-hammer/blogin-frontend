@@ -16,8 +16,8 @@ constructor(props){
   return (
     <TextInput
       style={{height: 500, borderColor: 'gray'}}
-      onChange={props.change}
-      value={props.text}
+      onChange={this.props.change}
+      value={this.props.text}
     />
   )
   }
