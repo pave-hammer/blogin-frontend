@@ -16,6 +16,6 @@ const Trending = (props) => {
 }
 
 
-const articleTitleStyles = {color: 'blue', fontWeight: 'bold', fontSize: 20}
+const articleTitleStyles = {backgroundColor: '#C0C0C0', fontWeight: 'bold', fontSize: 20}
 
 export default Trending
