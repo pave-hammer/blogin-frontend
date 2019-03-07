@@ -1,10 +1,9 @@
-
 import React from 'react'
 import { StyleSheet, Text, View, AppRegistry, TextInput } from 'react-native'
 import CreateBlog from './components/createblog'
 import Trending from './components/trending'
 
-export default class App extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
